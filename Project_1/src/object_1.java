@@ -13,7 +13,7 @@ class object_1 {
 	public void Setter(ArrayList<Integer> arr) {			
 		int length = 0;
 		Scanner scan = new Scanner(System.in);	// For User's Input 
-		
+		 
 		while(true) {
 			try {
 				System.out.println("Please Set the Sorting Amount");
