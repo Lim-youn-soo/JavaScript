@@ -8,7 +8,6 @@ class object_1 {
 		object_1 object = new object_1();
 		object.Setter(object.arr);			// Set the Sorting Values
 		object.BubbleSort(object.arr);		// Bubble Sorting
-
 	}
 	
 	public void Setter(ArrayList<Integer> arr) {			
@@ -19,6 +18,11 @@ class object_1 {
 			try {
 				System.out.println("Please Set the Sorting Amount");
 				length = scan.nextInt();		// User Enters Sorting Amount
+				if(length == 0) {
+					System.out.println("[Error]: Array's Size Can not be ZERO");
+					scan = new Scanner(System.in);  // Initialize Scanner -> If not, Infinite Loop
+					continue; 
+				}
 				break;
 			}catch(InputMismatchException e) {  // If User Enters not Integer -> Error
 				System.out.println("[Error]: Array's Size Must be Integer");
